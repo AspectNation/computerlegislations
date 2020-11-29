@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+	A:link {
+		color: #000000;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	A:active {
+		color: white;
+	}
+
+	A:visited {
+		color: white;
+	}
+
+	A:hover {
+		color: white;
+	}
+</style>
+
+<head>
+	<meta charset="UTF-8">
+	<title>D-Dogs Computer Legislations</title>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body onload="showContent('home')">
+	<div class="banner-text">
+		<ul>
+			<li onclick="showContent('home')">Home</li>
+			<li onclick="showContent('legislation1')">Legislations</li>
+			<li onclick="showContent('portfolio')">Portfolio</li>
+			<li>Services</li>
+			<li>Contact</li>
+		</ul>
+		<div class="content" id="home">
+			<h2>D-Dogs Computer Legislations</h2>
+		</div>
+		<div class="content" id="legislation1">
+			<h4>Computer Legislations</h4>
+			<h3>The Data Protection Act 1998</h3>
+			<br>The Data Protection Act was implimented/last edited in 1998.
+			<h3 onclick="showContent('legislation2')">Next</h3>
+		</div>
+		<div class="content" id="legislation2">
+			<h4>Next</h4>
+		</div>
+		<div class="content" id="portfolio">
+			<h4>Portfolio</h4>
+		</div>
+
+	</div>
+
+	<script>
+		function showContent(id) {
+			let elements = document.getElementsByClassName("content");
+			for (let element of elements) {
+				if (element.id !== id) {
+					element.style.display = "none";
+				} else {
+					element.style.display = "block";
+				}
+			}
+		}
+	</script>
+	<div class="animation-area">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+
+</html>
